@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKINFENT.GG - U GETTIN SKAMMED SON v2.0</title>
+    <!-- Link to external global.css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-skull"></i>
+                    <h1>SKIN<span>FENT</span>.GG</h1>
+                </a>
+                <div class="nav-links">
+                    <a href="#"><i class="fas fa-dice"></i> Open Cases</a>
+                    <a href="#"><i class="fas fa-shopping-cart"></i> Shop</a>
+                    <a href="#"><i class="fas fa-trophy"></i> Leaderboard</a>
+                    <a href="#"><i class="fas fa-wallet"></i> Trade Skins</a>
+                    <a href="blog"><i class="fas fa-newspaper"></i> Blog</a>
+                </div>
+                <div class="user-actions">
+                    <div class="balance">
+                        <i class="fas fa-coins"></i>
+                        $0.00 <!-- JS can update this -->
+                    </div>
+                    <button class="btn"><i class="fas fa-plus"></i> Deposit</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>THE MOST ADDICTIVE CSGO CASE OPENING EXPERIENCE</h2>
+                <p>SkinFent delivers a high so potent, you'll forget about food, sleep, and financial responsibility. Our proprietary algorithm ensures you keep chasing that dragon... knife!</p>
+                <div class="hero-btns">
+                    <button class="btn pulse"><i class="fas fa-gift"></i> GET FREE CASE (LIE)</button>
+                    <button class="btn"><i class="fas fa-syringe"></i> FIRST DOSE "FREE"</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">BUILD-A-CASE WORKSHOP OF HORRORS</h2>
+        <div class="build-case">
+            <p>Select your path to financial ruin. Our "totally fair" pricing bot will calculate a price guaranteed to make your wallet weep digital tears.</p>
+
+            <div class="case-items">
+                <!-- Items are from your original HTML, JS will interact with these -->
+                <div class="case-item" onclick="selectItem(this)">
+                    <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_knife_karam_am_diamond_light_large.9e98d5f8a4c1d95f1d5a8f4d3a4a5d5d.png" alt="Karambit">
+                    <h4>Karambit | Fentanyl Dream</h4>
+                    <p>$1,249.99</p>
+                </div>
+                <div class="case-item" onclick="selectItem(this)">
+                    <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_ak47_gs_ak47_empress_light_large.0d3e3d8a6d1a1b1b1b1b1b1b1b1b1b1b.png" alt="AK-47">
+                    <h4>AK-47 | Overdose Empress</h4>
+                    <p>$499.99</p>
+                </div>
+                <div class="case-item" onclick="selectItem(this)">
+                    <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_awp_cu_awp_viper_light_large.1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b.png" alt="AWP">
+                    <h4>AWP | Poison Dart</h4>
+                    <p>$349.99</p>
+                </div>
+                <div class="case-item" onclick="selectItem(this)">
+                    <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_glock_cu_glock_warmaiden_light_large.1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b.png" alt="Glock">
+                    <h4>Glock-18 | Pharma Rush</h4>
+                    <p>$199.99</p>
+                </div>
+                <div class="case-item" onclick="selectItem(this)">
+                    <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_deagle_cu_deagle_kumichodragon_light_large.1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b.png" alt="Desert Eagle">
+                    <h4>Desert Eagle | Oxy Blaze</h4>
+                    <p>$299.99</p>
+                </div>
+                <div class="case-item" onclick="selectItem(this)">
+                    <img src="https://steamcdn-a.akamaihd.net/apps/730/icons/econ/default_generated/weapon_m4a1_silencer_aa_fade_light_large.1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b.png" alt="M4A1-S">
+                    <h4>M4A1-S | Hotfix</h4>
+                    <p>$399.99</p>
+                </div>
+            </div>
+
+            <div class="case-preview">
+                <h3 class="preview-title">YOUR CUSTOM COFFIN</h3>
+                <div class="preview-items" id="previewItems">
+                    <!-- Preview items will appear here via JS -->
+                </div>
+                <div class="case-price" id="casePrice">
+                    $0.00 <!-- JS updates this -->
+                </div>
+                <button class="btn" onclick="buyCustomCase()"><i class="fas fa-skull-crossbones"></i> PURCHASE REGRET FOR <span id="priceDisplay">$0.00</span></button>
+            </div>
+        </div>
+
+        <h2 class="section-title">TRADE SKINS FOR PENNIES* (ON THE DOLLAR)</h2>
+        <div class="trade-section">
+            <p>*Our pennies are made of digital lint and regret. Not legal tender. Anywhere.</p>
+
+            <div class="trade-form">
+                <input type="text" class="skin-input" placeholder="PASTE VICTIM SKIN URL HERE..." id="skinInput">
+                <button class="btn" onclick="evaluateSkin()"><i class="fas fa-balance-scale-left"></i> "EVALUATE"</button>
+            </div>
+
+            <div class="trade-result" id="tradeResult" style="display: none;"> <!-- JS controls display -->
+                <h3>SKIN "APPRAISAL" RESULTS:</h3>
+                <p>Our highly advanced (and totally rigged) AI has determined your skin's value to us:</p>
+                <div class="money-offer">$0.47</div> <!-- JS updates this -->
+                <p>This insulting offer self-destructs in 10 seconds! HURRY!</p>
+                <button class="btn" style="margin-top: 15px;"><i class="fas fa-handshake-slash"></i> ACCEPT SCAM</button>
+            </div>
+        </div>
+
+        <div class="cyborg-section">
+            <h2 class="cyborg-title">A WORD FROM OUR #1 FANBOY</h2>
+            <div class="cyborg-quote">
+                "I injected SkinFent directly into my optical nerve. Now I see case odds even when I sleep. Best. Decision. Ever."
+            </div>
+            <div class="cyborg-author">- George Droyd, Patron Saint of Degenerate Gamblers</div>
+        </div>
+
+        <h2 class="section-title">SOBBING USER "TESTIMONIALS"</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"My wife took the kids, the dog, and the house. But who needs a family when you have a 0.001% chance at a virtual butterfly knife that looks like a glitch? SkinFent understands me."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <div class="author-info">
+                        <h4>LostItAllLarry</h4>
+                        <p>Status: Homeless but Hopeful</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p>"I told my boss I needed emergency surgery to fund my case openings. He fired me. Jokes on him, I unboxed a P250 Sand Dune! SkinFent: 1, Real Life: 0."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <div class="author-info">
+                        <h4>Unemployed&Unboxing</h4>
+                        <p>Rank: Professional Liar</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <p>"The voices told me to open more cases. SkinFent's 'customer support' (a magic 8-ball) agreed. Now the voices are louder, but my inventory is shinier. Coincidence? I think NOT."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <i class="fas fa-user-md"></i> <!-- Ironically -->
+                    </div>
+                    <div class="author-info">
+                        <h4>SchizoSkinner420</h4>
+                        <p>Diagnosis: Terminally Online</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="disclaimer">
+                <p><strong>ULTRA MEGA WARNING:</strong> SKINFENT.GG IS A FAKE, SATIRICAL WEBSITE. IT'S A JOKE. A BAD ONE, PROBABLY.
+                NO REAL GAMBLING, NO REAL MONEY, NO REAL SKINS. FENTANYL IS EXTREMELY DANGEROUS. GAMBLING ADDICTION IS SERIOUS.
+                THIS IS A PARODY. IF YOU CLICKED ANYTHING EXPECTING REAL STUFF, YOU HAVE BEEN BAMBOOZLED.
+                GO OUTSIDE. CALL YOUR MOM. PET A DOG (A REAL ONE).</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Terms of Exploitation</a>
+                <a href="#">Privacy (LOL What Privacy?)</a>
+                <a href="#">"Totally Not Rigged" Odds</a>
+                <a href="#">Contact (Good Luck)</a>
+            </div>
+            <div class="copyright">
+                © 202X SkinFent.gg - Your Wallet Is Our Plaything. All Wrongs Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

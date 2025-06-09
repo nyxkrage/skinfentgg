@@ -1,0 +1,601 @@
+/* CSS RESET (Simplified) */
+body, html, div, h1, h2, h3, h4, p, button, section, header, footer, nav, a, i, input, img, span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box; /* Easier layout */
+}
+
+/* MEME-IFIED STYLES - ADAPTED FOR NEW STRUCTURE */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Classic "computer" / glitchy feel */
+    background-color: #000000; /* Pure black */
+    color: #00FF00; /* Neon/Matrix Green for main text */
+    line-height: 1.4;
+    text-shadow: 0 0 2px #00FF00, 0 0 3px #00FF00; /* Green glow for text */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container { /* Retain container for structure but ensure it doesn't break meme style */
+    max-width: 1100px; /* Slightly less than original to make it feel more compact/intense */
+    margin: 0 auto;
+    padding: 0 10px; /* Reduced padding */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #5a0000, #000000); /* Darker red to black */
+    padding: 10px 0;
+    border-bottom: 3px solid #FF0000; /* HARSH RED */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo i.fa-skull {
+    font-size: 2.5em !important; /* Make skull bigger */
+    color: #FF0000 !important;
+    text-shadow: 0 0 5px #FF0000, 0 0 10px #FFFF00;
+    animation: pulseIcon 1.5s infinite ease-in-out;
+}
+@keyframes pulseIcon {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.logo h1 {
+    font-size: 2em; /* Adjusted size */
+    color: #FFFF00; /* Yellow */
+    text-shadow: 1px 1px 0 #FF0000, 0 0 5px #FF0000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.logo span { /* This was SKIN<span>FENT</span>.GG */
+    color: #00FF00; /* Neon Green */
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Reduced gap */
+    padding: 0 1em;
+}
+
+.nav-links a {
+    color: #00FF00; /* Neon Green */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em; /* Adjusted size */
+    transition: all 0.2s;
+    position: relative;
+    text-transform: uppercase;
+    padding: 5px;
+    border: 1px dashed transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+}
+
+.nav-links a:hover {
+    color: #FFFF00; /* Yellow */
+    background-color: #FF0000;
+    text-shadow: 0 0 5px #FFFF00;
+    border-color: #FFFF00;
+    transform: skew(-3deg);
+}
+.nav-links a i {
+    margin-right: 5px;
+    color: #FF0000; /* Red icons */
+}
+.nav-links a:hover i {
+    color: #FFFF00; /* Yellow icons on hover */
+}
+
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.balance {
+    background: #111111;
+    padding: 5px 10px;
+    border-radius: 0; /* No rounded corners */
+    border: 1px solid #FF0000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9em;
+    color: #FFFF00; /* Yellow balance text */
+}
+.balance i.fa-coins {
+    color: #FFFF00 !important; /* Yellow coins */
+    text-shadow: 0 0 3px #FF0000;
+}
+
+/* General Button Style (can be overridden) */
+.btn {
+    background: linear-gradient(to right, #8b0000, #FF0000); /* Dark Red to Harsh Red */
+    color: #000000; /* Black text */
+    border: 2px solid #FFFF00; /* Yellow border */
+    padding: 8px 15px;
+    border-radius: 0; /* NO ROUNDED CORNERS */
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: crosshair;
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+.btn:hover {
+    transform: translateY(-2px) scale(1.05) skew(-3deg);
+    background: linear-gradient(to right, #FFFF00, #FFCC00); /* Yellow hover */
+    color: #FF0000; /* Red text */
+    border-color: #FF0000;
+    box-shadow: 0 3px 10px rgba(255, 0, 0, 0.7);
+}
+.btn i { margin-right: 5px; }
+
+
+/* Hero Section */
+.hero {
+    background: url('https://i.imgur.com/d5YqYLj.png') no-repeat center center;
+    background-size: cover;
+    /* height: 400px; Reduced height */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content for more impact */
+    position: relative;
+    margin-bottom: 30px;
+    padding: 40px 0; /* Add padding for content */
+    border-bottom: 5px solid #FF0000;
+}
+
+.hero::before { /* Darker, more aggressive overlay */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Darker overlay */
+    /* Optional: Add a subtle scanline or noise pattern here */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    padding: 20px;
+    background: rgba(26, 26, 26, 0.6); /* Semi-transparent black */
+    border: 3px dashed #FF0000; /* Dashed Red Border */
+    text-align: center; /* Center text */
+    box-shadow: 0 0 20px #FF0000;
+}
+
+.hero h2 {
+    font-size: 2.2rem; /* Adjusted */
+    margin-bottom: 15px;
+    color: #FF0000; /* HARSH RED */
+    text-shadow: 0 0 8px #FF0000, 0 0 5px #FFFF00;
+    text-transform: uppercase;
+    animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker { /* Copied from previous */
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0 0 8px #FF0000, 0 0 5px #FFFF00, 0 0 10px #FF0000; opacity: 1;
+    }
+    20%, 24%, 55% { text-shadow: none; opacity: 0.7; }
+}
+
+.hero p {
+    font-size: 1em; /* Adjusted */
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #00FF00; /* Neon Green */
+}
+
+.hero-btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center buttons */
+}
+.hero-btns .btn.pulse { /* Ensure pulse animation applies */
+    animation: pulseButton 1s infinite alternate;
+}
+@keyframes pulseButton {
+    from { transform: scale(1); box-shadow: 0 0 10px #FF0000; }
+    to { transform: scale(1.05); box-shadow: 0 0 20px #FF0000, 0 0 30px #FFFF00; }
+}
+.hero-btns .btn:last-child { /* Special "dose" button */
+    background: linear-gradient(to right, #003300, #00FF00); /* Dark Green to Neon Green */
+    color: #000000;
+    border-color: #FFFF00;
+}
+.hero-btns .btn:last-child:hover {
+    background: linear-gradient(to right, #FFFF00, #CCFF00);
+    color: #00AA00;
+    border-color: #00FF00;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 1.8rem; /* Adjusted */
+    text-align: center;
+    margin: 30px 0 20px 0; /* Adjusted margin */
+    color: #FF0000; /* HARSH RED */
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #FF0000;
+}
+
+.section-title::after { /* Dotted/dashed underline */
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, #FFFF00, #FFFF00 3px, transparent 3px, transparent 6px); /* Yellow dash */
+}
+
+/* Build-A-Case Section */
+.build-case {
+    background: #110000; /* Very dark red, almost black */
+    padding: 20px;
+    border-radius: 0;
+    border: 2px dashed #FF0000;
+    margin-bottom: 30px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.7), 0 0 10px #FF0000;
+}
+.build-case > p { /* Text at the top of build-case */
+    text-align: center; margin-bottom: 15px; font-size: 0.9em; color: #00BB00;
+}
+
+.case-items { /* Grid for skin selection */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller items */
+    gap: 10px; /* Reduced gap */
+    margin-bottom: 20px;
+}
+
+.case-item { /* Individual skin item for selection */
+    background: #0a0000; /* Very dark red */
+    border-radius: 0;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer; /* Keep pointer for JS */
+    transition: all 0.2s;
+    border: 2px solid #FF0000; /* Red border */
+    position: relative;
+    overflow: hidden;
+}
+.case-item:hover {
+    transform: translateY(-3px) rotate(1deg);
+    border-color: #FFFF00; /* Yellow border on hover */
+    box-shadow: 0 0 15px #FFFF00;
+}
+.case-item.selected { /* Style for selected item */
+    border-color: #00FF00; /* Neon Green border when selected */
+    background: rgba(0, 255, 0, 0.1); /* Slight green tint */
+    box-shadow: 0 0 10px #00FF00, inset 0 0 10px #00FF00;
+}
+.case-item img {
+    width: 90%; /* Smaller image */
+    height: 80px; /* Smaller image */
+    object-fit: contain;
+    margin-bottom: 5px;
+    filter: drop-shadow(0 0 3px #FF0000); /* Red glow for images */
+}
+.case-item h4 { /* Skin name */
+    font-size: 0.85em;
+    margin-bottom: 3px;
+    color: #FFFF00; /* Yellow skin name */
+    text-transform: uppercase;
+}
+.case-item p { /* Skin price */
+    color: #FF0000; /* Red price */
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.case-preview { /* Preview of selected items */
+    background: #050505; /* Darker black */
+    padding: 15px;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px solid #FFFF00; /* Yellow border */
+}
+.preview-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #FFFF00; /* Yellow */
+    text-transform: uppercase;
+}
+.preview-items { /* Container for small preview images */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 15px;
+    min-height: 50px; /* Ensure space even when empty */
+}
+.preview-item { /* Small selected item preview */
+    background: #111111;
+    border-radius: 0;
+    padding: 5px;
+    width: 80px; /* Small preview */
+    text-align: center;
+    border: 1px solid #FF0000; /* Red border */
+}
+.preview-item img {
+    width: 100%;
+    height: 40px; /* Small image */
+    object-fit: contain;
+}
+.preview-item p { /* Name under small preview image */
+    font-size: 0.7rem;
+    margin-top: 3px;
+    color: #00CC00; /* Green text */
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.case-price { /* Total price display */
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #FF0000; /* Red price */
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px #FF0000;
+}
+/* Purchase button in build-a-case will use general .btn style */
+
+/* Trade Section */
+.trade-section {
+    background: #110000; /* Very dark red */
+    padding: 20px;
+    border-radius: 0;
+    border: 2px dashed #FF0000;
+    margin-bottom: 30px;
+}
+.trade-section > p { /* Text at top of trade section */
+    text-align: center; margin-bottom: 15px; font-size: 0.9em; color: #00BB00;
+}
+.trade-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    margin-top: 15px;
+}
+.skin-input {
+    background: #050505; /* Darker black */
+    border: 2px solid #FF0000; /* Red border */
+    border-radius: 0;
+    padding: 10px;
+    color: #00FF00; /* Neon green text */
+    font-size: 0.9rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.skin-input::placeholder {
+    color: #555500; /* Dark yellow/green placeholder */
+    font-style: italic;
+}
+/* Evaluate button will use general .btn style */
+
+.trade-result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #050505; /* Darker black */
+    border-radius: 0;
+    border: 2px dashed #00FF00; /* Neon Green dashed border */
+    text-align: center;
+    /* display: none; by default, JS handles this */
+}
+.trade-result.show { display: block !important; } /* Ensure JS can show it */
+.trade-result h3 {
+    color: #FFFF00; /* Yellow */
+    font-size: 1.2em; text-transform: uppercase; margin-bottom: 8px;
+}
+.trade-result p { font-size: 0.9em; color: #00CC00; margin-bottom: 5px; }
+.money-offer {
+    font-size: 1.8rem; /* Large offer text */
+    color: #FF0000; /* Red offer */
+    font-weight: bold;
+    margin: 8px 0;
+    text-shadow: 0 0 10px #FF0000;
+    animation: pulseButton 0.5s infinite alternate; /* Pulsing offer */
+}
+/* Accept offer button will use general .btn style */
+
+/* Cyborg Section */
+.cyborg-section {
+    background: linear-gradient(135deg, #5a0000, #000000); /* Darker Red to Black */
+    padding: 25px;
+    border-radius: 0;
+    margin: 30px 0;
+    text-align: center;
+    border: 3px solid #00FF00; /* Neon Green border */
+    position: relative;
+    overflow: hidden; /* For any pseudo-element effects */
+    box-shadow: 0 0 20px #00FF00, inset 0 0 10px #000000;
+}
+.cyborg-title {
+    font-size: 2rem; /* Adjusted */
+    color: #00FF00; /* Neon Green */
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px #00FF00, 0 0 5px #FFFF00;
+    text-transform: uppercase;
+}
+.cyborg-quote {
+    font-size: 1.3rem; /* Adjusted */
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    padding: 15px;
+    color: #CCCCCC; /* Lighter grey for quote text for readability against green */
+    text-shadow: 1px 1px 1px #000;
+}
+.cyborg-quote::before, .cyborg-quote::after { /* Quote marks */
+    content: '"';
+    font-size: 3rem;
+    color: #FF0000; /* Red quotes */
+    position: absolute;
+    text-shadow: 0 0 5px #FF0000;
+    opacity: 0.7;
+}
+.cyborg-quote::before { top: -10px; left: -15px; transform: rotate(-15deg); }
+.cyborg-quote::after { bottom: -20px; right: -15px; transform: rotate(15deg); }
+.cyborg-author {
+    font-size: 1.2rem; /* Adjusted */
+    color: #00FF00; /* Neon Green */
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Testimonials */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax */
+    gap: 15px; /* Reduced gap */
+    margin: 30px 0;
+}
+.testimonial {
+    background: #110000; /* Very dark red */
+    padding: 15px;
+    border-radius: 0;
+    border: 1px solid #FF0000; /* Red border */
+    position: relative;
+    box-shadow: 0 0 5px #FF0000;
+}
+.testimonial::before { /* Quote mark in testimonial */
+    content: '“'; /* Different quote for visual variety */
+    font-size: 4rem;
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    color: #FF0000;
+    opacity: 0.2;
+    font-family: Georgia, serif; /* More traditional quote font */
+    z-index: 0;
+}
+.testimonial p { /* Testimonial text */
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #00DD00; /* Slightly different green */
+    position: relative; z-index: 1; /* Above pseudo quote */
+}
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative; z-index: 1;
+}
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 0; /* No rounded avatar */
+    background: #050505; /* Darker black */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border: 1px solid #FF0000;
+}
+.author-avatar i { color: #FF0000; } /* Red icon in avatar */
+.author-info h4 { /* Author name */
+    color: #FFFF00; /* Yellow */
+    font-size: 0.95em;
+    margin-bottom: 2px;
+}
+.author-info p { /* Author "rank" */
+    font-style: normal;
+    font-size: 0.8rem;
+    color: #888800; /* Dark yellow/green */
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    background: #5a0000; /* Darker Red */
+    padding: 25px 0 15px;
+    text-align: center;
+    margin-top: 30px;
+    border-top: 3px solid #FF0000; /* Red top border */
+}
+.disclaimer {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    border-radius: 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #CC0000; /* Darker Red for disclaimer text */
+    border: 1px dashed #FF0000;
+}
+.disclaimer strong { color: #FFFF00; } /* Yellow for strong text in disclaimer */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Reduced gap */
+    margin-bottom: 20px;
+}
+.footer-links a {
+    color: #AAAA00; /* Dark yellow/green */
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 0.85em;
+    text-transform: uppercase;
+}
+.footer-links a:hover {
+    color: #00FF00; /* Neon green on hover */
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+.copyright {
+    color: #880000; /* Very dark red */
+    font-size: 0.8rem;
+}
+
+/* Mobile Responsiveness (simplified for meme style) */
+@media (max-width: 900px) {
+    .header-content { flex-direction: column; gap: 10px; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 8px;}
+    .nav-links a { font-size: 0.8em; }
+    .hero { padding: 20px 0; }
+    .hero h2 { font-size: 1.8rem; }
+    .hero-btns { flex-direction: column; gap: 8px; }
+    .trade-form { grid-template-columns: 1fr; }
+    .cyborg-quote { font-size: 1.1rem; }
+    .section-title { font-size: 1.5rem; }
+    .logo h1 { font-size: 1.8em;}
+    .logo i.fa-skull { font-size: 2em !important;}
+}
